@@ -5,8 +5,8 @@ import (
 	"bytes"
 	"strconv"
 
-	"gopkg.in/mcuadros/go-syslog.v2/internal/syslogparser/rfc3164"
-	"gopkg.in/mcuadros/go-syslog.v2/internal/syslogparser/rfc5424"
+	"github.com/boundlessdigital/go-syslog/internal/syslogparser/rfc3164"
+	"github.com/boundlessdigital/go-syslog/internal/syslogparser/rfc5424"
 )
 
 /* Selecting an 'Automatic' format detects incoming format (i.e. RFC3164 vs RFC5424) and Framing
@@ -19,6 +19,7 @@ import (
  * at the start of the frame), and a risk that you may parse things you don't want to parse
  * (rogue syslog clients using other formats), so if you can be absolutely sure of your syslog
  * format, it would be best to select it explicitly.
+ */ly.
  */
 
 type Automatic struct{}
