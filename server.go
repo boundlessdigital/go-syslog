@@ -275,6 +275,9 @@ func (s *Server) parser(line []byte, client string, tlsPeer string) {
 	}
 	logParts["tls_peer"] = tlsPeer
 
+	// Add original message into log parts
+	logParts["original_message"] = string(line)
+
 	s.handler.Handle(logParts, int64(len(line)), err)
 }
 
