@@ -19,7 +19,6 @@ import (
  * at the start of the frame), and a risk that you may parse things you don't want to parse
  * (rogue syslog clients using other formats), so if you can be absolutely sure of your syslog
  * format, it would be best to select it explicitly.
- */ly.
  */
 
 type Automatic struct{}
